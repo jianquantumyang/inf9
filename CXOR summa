@@ -1,0 +1,30 @@
+
+// Online C++ Compiler - Build, Compile and Run your C++ programs online in your favorite browser
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+
+    int n,m;
+    cin >> n >>m;
+    
+    int a[n];
+    for(int i = 0;i<n;i++)
+    { 
+        cin >> a[i];
+    }
+    for(int k = 1;k<=m;k++)
+    {
+        int tmp = a[0]%k;
+        for (int i =1;i<n;i++)
+        {
+            tmp = tmp ^ (a[i]%k);
+        }
+        cout << tmp << ' ';
+    }
+    
+    return 0;
+}
